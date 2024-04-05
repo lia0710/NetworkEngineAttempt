@@ -131,3 +131,8 @@ void NetworkClient::_Update()
 		packet = rakInterface->Receive();
 	}
 }
+
+void NetworkClient::SendPacket(RakNet::BitStream& bs)
+{
+	rakInterface->Send(&bs, MEDIUM_PRIORITY, RELIABLE_ORDERED, 0, serverGUID, false);
+}

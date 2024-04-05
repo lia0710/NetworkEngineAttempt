@@ -4,10 +4,11 @@
 #define _COMPONENT_H_
 
 #include "Object.h"
+#include "NetworkRPC.h"
 
 class Entity;
 
-class Component : public Object
+class Component : public Object, protected NetworkRPC
 {
     DECLARE_ABSTRACT_DERIVED_CLASS(Component, Object)
 
