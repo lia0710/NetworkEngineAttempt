@@ -1,0 +1,49 @@
+{
+  "AssetManager": {
+    "Assets": [
+      {
+        "GUID": "https-youtu-be-jVhlJNJopOQ"
+      },
+      {
+        "GUID": "meow"
+      }
+    ]
+  },
+  "Scene": {
+    "Name": "Level02",
+    "GUID": "45f479c9-f110-43c5-be35-9fbbc5d7d694",
+    "IsEnabled": false,
+    "Entities": [
+        {
+            "Name": "GameOver",
+            "GUID": "c4a28255-5861-4c87-a987-924370ebeed0",
+            "Transform": {
+              "GUID": "412097cc-5da8-4a31-ba9b-dbdf92f11088",
+              "Position": [320.0, 320.0],
+              "Rotation": 0.0,
+              "Scale": [0.2, 0.2]
+            },
+            "Components": [
+                {
+                    "ClassName": "GameOver",
+                    "ClassData": {
+                      "GUID": "1b7bc764-eefc-47ff-8a13-2b849ef80b65",
+                      "SoundTimer": 5.0,
+                        "Sound": "meow",
+                        "SceneToLoad": "1a9e5171-c7ab-47d4-9af4-d490d1494201",
+                        "SceneLoadDelay": 15.0
+                    }
+                },
+                {
+                    "ClassName": "FontSprite",
+                    "ClassData": {
+                      "GUID": "5c985f69-fb43-4f83-9d70-185c82867da0",
+                      "Text": "Game Over",
+                      "Font": "https-youtu-be-jVhlJNJopOQ"
+                    }
+                }
+            ]
+        }
+    ]
+  }
+}

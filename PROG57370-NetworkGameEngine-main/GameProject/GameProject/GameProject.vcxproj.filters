@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_Register.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOver.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameCore.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOver.h">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Build\Assets\AssetManager.json">
+      <Filter>Configuration Files</Filter>
+    </None>
+    <None Include="..\Build\Assets\AudioSystem.json">
+      <Filter>Configuration Files</Filter>
+    </None>
+    <None Include="..\Build\Assets\RenderSettings.json">
+      <Filter>Configuration Files</Filter>
+    </None>
+    <None Include="..\Build\Assets\SceneManager.json">
+      <Filter>Configuration Files</Filter>
+    </None>
+    <None Include="..\Build\Assets\Scenes\Scene01.json">
+      <Filter>Scenes</Filter>
+    </None>
+    <None Include="..\Build\Assets\Scenes\Scene02.json">
+      <Filter>Scenes</Filter>
+    </None>
+    <None Include="..\Build\Assets\hitEffect03.wav.asset">
+      <Filter>Assets\Sounds</Filter>
+    </None>
+    <None Include="..\Build\Assets\girl.png.asset">
+      <Filter>Assets\Textures</Filter>
+    </None>
+    <None Include="..\Build\Assets\nottaco.png.asset">
+      <Filter>Assets\Textures</Filter>
+    </None>
+    <None Include="..\Build\Assets\PAPYRUS.TTF.asset">
+      <Filter>Assets\Fonts</Filter>
+    </None>
+    <None Include="..\Build\Assets\NetworkSettings.json">
+      <Filter>Configuration Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0478d87c-1765-41cd-acad-55fa5c5d6b48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{c7736a56-6ce9-4c9b-9f79-ad95c73e5ac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Configuration Files">
+      <UniqueIdentifier>{b756e000-18e7-47f5-afdd-08bb382be9d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{48c39fed-77cf-46b6-99e4-e11723fe6e79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game">
+      <UniqueIdentifier>{2c60c914-ea66-4e88-b933-9dcf6916ddfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{ed905eec-501f-4847-95e3-9be5e9e0f1e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game">
+      <UniqueIdentifier>{2ee47f55-6683-499c-b248-d66c86e4cbb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{3b039dc0-fb18-40a3-992a-d93f49fa2e36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{d4205596-d14a-459b-aa18-e8880286e49d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Textures">
+      <UniqueIdentifier>{9ec7632a-b438-4b06-aa33-745b3b1df316}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Sounds">
+      <UniqueIdentifier>{072398fb-8655-40a4-827e-548aa5acadbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Fonts">
+      <UniqueIdentifier>{95613a3e-a2ef-4150-8e1d-634ee5a5fe9a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\Build\Assets\hitEffect03.wav">
+      <Filter>Assets\Sounds</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Build\Assets\girl.png">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="..\Build\Assets\nottaco.png">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\Build\Assets\PAPYRUS.TTF">
+      <Filter>Assets\Fonts</Filter>
+    </Font>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+*/.vs
+*/.user
+Engine/Engine-Libs/
+Engine/Intermediate/
+GameProject/Intermediate/
+GameProject/Build/bin/*
+
+# User-specific files
+*/*/*.vcxproj.user
+
+docs/

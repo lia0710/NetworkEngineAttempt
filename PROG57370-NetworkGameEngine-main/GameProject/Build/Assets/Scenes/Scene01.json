@@ -1,0 +1,85 @@
+{
+  "AssetManager": {
+    "Assets": [
+      {
+        "GUID": "awooga"
+      },
+      {
+        "GUID": "girl"
+      },
+      {
+        "GUID": "Explosion_435e0fce-7b11-409c-858e-af4bd7fe99c0"
+      }
+    ]
+  },
+  "Scene": {
+    "Name": "Level01",
+    "GUID": "1a9e5171-c7ab-47d4-9af4-d490d1494201",
+    "IsEnabled": true,
+    "Entities": [
+        {
+            "Name": "Player",
+            "GUID": "1cc2cb0e-085b-43cf-9bfe-c47b5158b2bf",
+            "Transform": {
+              "GUID": "77919e8a-8f63-4e8a-886f-b038bbdc5e77",
+              "Position": [ 100.0, 200.0 ],
+              "Rotation": 0.0,
+              "Scale": [ 0.5, 0.5 ]
+            },
+            "Components": [
+                {
+                    "ClassName": "AnimatedSprite",
+                    "ClassData": {
+                      "GUID": "d8db5d8d-e65d-4f7a-b0eb-ebd55bd70c22",
+                      "Texture": "girl",
+                      "SpriteSheet": {
+                          "Rows": 1,
+                          "Columns": 20,
+                          "Frames": 20
+                      }
+                    }
+                },
+                {
+                    "ClassName": "BoxCollider",
+                    "ClassData": {
+                      "GUID": "3312004f-5660-413f-b29b-554237b25edf"
+                    }
+                },
+                {
+                    "ClassName": "Player",
+                    "ClassData": {
+                      "GUID": "13fa2605-d562-4978-87d4-c7bc1ea24bd9",
+                      "Speed": 400.0,
+                      "DeathScene": "45f479c9-f110-43c5-be35-9fbbc5d7d694"
+                    }
+                }
+            ]
+        },
+      {
+        "Name": "Enemy",
+        "GUID": "uwu2",
+        "Transform": {
+          "GUID": "1d7737fa-abfd-457c-8a1f-b46a4019cd8d",
+          "Position": [1000.0, 250.0],
+          "Rotation": 0.0,
+          "Scale": [0.4, 0.4]
+        },
+        "Components": [
+            {
+                "ClassName": "Sprite",
+                "ClassData": {
+                  "GUID": "32dea180-80ca-4e88-acb7-1bf4a68ebfa5",
+                  "Texture": "awooga"
+                }
+            },
+            {
+                "ClassName": "CircleCollider",
+                "ClassData": {
+                  "GUID": "b99ca8cc-f97d-4e98-9155-7312373a1727"
+                }
+            }
+        ]
+      }
+    ]
+  }
+}
