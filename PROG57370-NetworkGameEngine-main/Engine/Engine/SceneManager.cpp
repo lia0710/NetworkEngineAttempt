@@ -165,21 +165,6 @@ void SceneManager::ProcessPacket(RakNet::BitStream& bitStream)
 		}
 		break;
 
-		case MSG_RPC:
-		{
-			STRCODE sceneUid = 0;
-			bitStream.Read(sceneUid);
-			for (Scene* scene : loadedScenes)
-			{
-				if (scene->uid == sceneUid)
-				{
-					scene->InvokeRPC(bitStream);
-					break;
-				}
-			}
-		}
-		break;
-
 	}
 }
 

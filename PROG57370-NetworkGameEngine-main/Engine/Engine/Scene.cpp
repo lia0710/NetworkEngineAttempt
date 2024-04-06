@@ -3,7 +3,6 @@
 #include "Entity.h"
 #include "AssetManager.h"
 #include "NetworkServer.h"
-#include "NetworkRPC.h"
 
 void Scene::Serialize(RakNet::BitStream& bitStream) const
 {
@@ -316,23 +315,4 @@ bool Scene::RemoveEntity(STRCODE entityId)
 		}
 	}
 	return false;
-}
-
-void Scene::InvokeRPC(RakNet::BitStream& bitStream)
-{
-	STRCODE entityID;
-	bitStream.Read(entityID);
-
-	for (const auto entity : entities)
-	{
-		if (entity->GetUid() == entityID)
-		{
-			STRCODE componentID;
-			bitStream.Read(componentID);
-			NetworkRPC* networkRPC = (NetworkRPC*)entity->GetComponentByUiD(componentID);
-			ASSERT(networkRPC != nullptr, "Component is not a NetworkRPC");
-			networkRPC->InvokeRPC(bitStream);
-			break;
-		}
-	}
 }

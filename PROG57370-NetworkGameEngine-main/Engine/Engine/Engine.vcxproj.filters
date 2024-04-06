@@ -135,9 +135,6 @@
     <ClCompile Include="Collider.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
-    <ClCompile Include="NetworkRPC.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Component.h">
@@ -244,9 +241,6 @@
     </ClInclude>
     <ClInclude Include="Collider.h">
       <Filter>Header Files\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="NetworkRPC.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

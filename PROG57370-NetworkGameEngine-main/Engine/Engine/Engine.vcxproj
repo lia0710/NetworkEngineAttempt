@@ -177,7 +177,6 @@
     <ClCompile Include="EngineMath.cpp" />
     <ClCompile Include="MusicAsset.cpp" />
     <ClCompile Include="NetworkClient.cpp" />
-    <ClCompile Include="NetworkRPC.cpp" />
     <ClCompile Include="NetworkServer.cpp" />
     <ClCompile Include="Renderable.cpp" />
     <ClCompile Include="json.cpp" />
@@ -214,7 +213,6 @@
     <ClInclude Include="MusicAsset.h" />
     <ClInclude Include="NetworkClient.h" />
     <ClInclude Include="NetworkCommon.h" />
-    <ClInclude Include="NetworkRPC.h" />
     <ClInclude Include="NetworkServer.h" />
     <ClInclude Include="Renderable.h" />
     <ClInclude Include="json.hpp" />
