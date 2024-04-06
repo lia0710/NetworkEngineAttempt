@@ -117,6 +117,10 @@ void NetworkServer::_Update()
 			std::cerr << "Incomplatible protocol version from " << packet->systemAddress.ToString(true) << std::endl;
 			break;
 
+		case MSG_SCENE_MANAGER:
+			SceneManager::Instance().ProcessPacket(bs);
+			break;
+
 		default:
 			std::cout << "Oops, received an unhandled packet with id " << (unsigned)packetId << std::endl;
 			break;
