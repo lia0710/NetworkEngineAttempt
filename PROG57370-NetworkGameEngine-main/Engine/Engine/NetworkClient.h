@@ -18,6 +18,8 @@ public:
 
 	bool IsInitialized() { return initialized; }
 
+	void SendPacket(RakNet::BitStream& bs);
+
 protected:
 	void Initialize();
 	void Update();
