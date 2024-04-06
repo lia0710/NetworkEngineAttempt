@@ -20,12 +20,12 @@ void Player::Update()
 	Vec2 dir = Vec2::Zero;
 	const InputSystem& input = InputSystem::Instance();
 
-	if (input.IsKeyPressed(SDLK_KP_ENTER) && networkedEntity == nullptr)
+	if (input.IsKeyPressed(SDLK_q) && networkedEntity == nullptr)
 	{
-		networkedEntity = SceneManager::Instance().CreateEntity();
-		Sprite* sprite = (Sprite*)networkedEntity->CreateComponent("Sprite");
-		TextureAsset* asset = (TextureAsset*)AssetManager::Instance().GetAsset("Explosion_435e0fce-7b11-409c-858e-af4bd7fe99c0");
-		sprite->SetTextureAsset(asset);
+			networkedEntity = SceneManager::Instance().CreateEntity();
+			Sprite* sprite = (Sprite*)networkedEntity->CreateComponent("Sprite");
+			TextureAsset* asset = (TextureAsset*)AssetManager::Instance().GetAsset("Explosion_435e0fce-7b11-409c-858e-af4bd7fe99c0");
+			sprite->SetTextureAsset(asset);
 	}
 
 	// Handle horizontal movement
