@@ -21,6 +21,15 @@ private:
     STRCODE game_over_scene = -1;
 
     Entity* networkedEntity = nullptr;
+
+    bool spawned = false;
+
+private:
+    void RPC(RakNet::BitStream& bitStream);
+    void RPCNetworkedEntity(RakNet::BitStream& bitStream);
+
+private:
+    Vec2 movement;
 };
 
 #endif // PLAYER_H

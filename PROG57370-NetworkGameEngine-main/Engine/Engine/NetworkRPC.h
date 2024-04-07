@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef _INETWORK_RPC_H
-#define _INETWORK_RPC_H
+#ifndef _NETWORK_RPC
+#define _NETWORK_RPC
 
 #include "EngineCore.h"
 
