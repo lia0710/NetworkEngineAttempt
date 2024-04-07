@@ -27,6 +27,8 @@ private:
 private:
     void RPC(RakNet::BitStream& bitStream);
     void RPCNetworkedEntity(RakNet::BitStream& bitStream);
+    void RPCNetworkedCollision(RakNet::BitStream& bitStream);
+
 
 private:
     Vec2 movement;

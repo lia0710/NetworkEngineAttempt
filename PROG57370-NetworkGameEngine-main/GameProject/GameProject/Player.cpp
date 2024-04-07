@@ -19,6 +19,7 @@ void Player::Initialize()
 	
 	RegisterRPC(GetHashCode("RPC"), std::bind(&Player::RPC, this, std::placeholders::_1));
 	RegisterRPC(GetHashCode("RPCNetworkedEntity"), std::bind(&Player::RPCNetworkedEntity, this, std::placeholders::_1));
+	RegisterRPC(GetHashCode("RPCNetworkedCollision"), std::bind(&Player::RPCNetworkedCollision, this, std::placeholders::_1));
 }
 
 void Player::Update() 
@@ -72,6 +73,33 @@ void Player::Update()
 #ifdef DEBUG_PLAYER
 			LOG("Input: " << dir.x << ", " << dir.y);
 #endif
+		}
+
+		if (movement != Vec2::Zero) {
+			for (const auto& other : collider->OnCollisionEnter())
+			{
+				LOG("collision code being run");
+				if (other->GetOwner()->GetName() != "Enemy")
+				{
+					continue;
+				}
+
+
+				//report collision with enemy to server
+				RakNet::BitStream bitStream;
+
+				bitStream.Write((unsigned char)MSG_SCENE_MANAGER);
+				bitStream.Write((unsigned char)MSG_RPC);
+
+				bitStream.Write(owner->GetParentScene()->GetUid());
+
+				bitStream.Write(owner->GetUid());
+
+				bitStream.Write(GetUid());
+				bitStream.Write(GetHashCode("RPCNetworkedCollision"));
+
+				NetworkClient::Instance().SendPacket(bitStream);
+			}
 		}
 
 
@@ -137,6 +165,7 @@ void Player::Update()
 		//////////////////collision code handled here
 		for (const auto& other : collider->OnCollisionEnter())
 		{
+			LOG("collision code being run");
 			if (other->GetOwner()->GetName() != "Enemy")
 			{
 				continue;
@@ -275,4 +304,14 @@ void Player::RPCNetworkedEntity(RakNet::BitStream& bitStream)
 	Sprite* sprite = (Sprite*)networkedEntity->CreateComponent("Sprite");
 	TextureAsset* asset = (TextureAsset*)AssetManager::Instance().GetAsset("Explosion_435e0fce-7b11-409c-858e-af4bd7fe99c0");
 	sprite->SetTextureAsset(asset);
+}
+
+void Player::RPCNetworkedCollision(RakNet::BitStream& bitStream)
+{
+	//collision with taco reported by client
+	Scene* current_scene = SceneManager::Instance().GetActiveScene();
+	if (SceneManager::Instance().SetActiveScene(game_over_scene))
+	{
+		current_scene->SetEnabled(false);
+	}
 }
